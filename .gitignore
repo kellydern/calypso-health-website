@@ -1,0 +1,8 @@
+.DS_Store
+.AppleDouble
+.env
+.env.*
+fonts/*.otf
+fonts/*.ttf
+fonts/*.woff
+fonts/*.woff2

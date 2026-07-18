@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Calypso Health is a thyroid-aware companion for mood, cycle, labs, and AI-guided wellness insights." />
+  <meta name="theme-color" content="#5672db" />
+  <title>Calypso Health | Thyroid-aware wellness companion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <section class="hero-full" id="top">
+    <div class="hero-bg" aria-hidden="true">
+      <img
+        class="hero-bg__photo"
+        data-src="images/hero-bg.jpg"
+        alt=""
+        decoding="async"
+        fetchpriority="low"
+      />
+    </div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="logo" href="#">calypso</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#waitlist">Waitlist</a>
+        <a href="#waitlist" class="nav-cta">Join waitlist</a>
+      </nav>
+    </header>
+
+    <div class="hero-inner">
+      <div class="hero-content">
+        <h1>
+          Living with Hashimoto's is <em>your story</em> that belongs in one calm place
+        </h1>
+        <p class="hero-lead">
+          We invite you to explore mood, cycle patterns, and thyroid labs in one private record, with compassionate, research-grounded guidance from Calypso by your side.
+        </p>
+        <a class="btn-hero" href="#waitlist">
+          <span class="btn-hero__label">Join waitlist</span>
+          <span class="btn-hero__icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M7 4l5 5-5 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </a>
+      </div>
+
+      <aside class="lab-showcase" aria-label="Example thyroid lab chart">
+        <article class="lab-showcase__card">
+          <header class="lab-showcase__header">
+            <div class="lab-showcase__title-row">
+              <h2 class="lab-showcase__name">TSH</h2>
+              <span class="lab-showcase__status lab-showcase__status--good">Good</span>
+            </div>
+            <div class="lab-showcase__meta">
+              <p class="lab-showcase__value">2.2 <span>mIU/L</span></p>
+              <p class="lab-showcase__ref">Ref: 0.3 – 5.0 mIU/L</p>
+            </div>
+          </header>
+          <svg class="lab-showcase__chart tsh-chart" viewBox="0 0 360 168" role="img" aria-label="TSH lab trend from 2017 to 2019">
+              <title>TSH trend over time</title>
+              <defs>
+                <linearGradient id="tsh-fill" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#E8D4F0" stop-opacity="0.65"/>
+                  <stop offset="100%" stop-color="#F3E8F7" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <g class="chart-grid">
+                <rect class="chart-plot" x="40" y="14" width="308" height="118" rx="14" fill="#FAF7F4"/>
+                <line class="chart-gridline" x1="40" y1="38" x2="348" y2="38" stroke="#E3DFDA" stroke-width="1" stroke-dasharray="5 5"/>
+                <line class="chart-gridline" x1="40" y1="66" x2="348" y2="66" stroke="#E3DFDA" stroke-width="1" stroke-dasharray="5 5"/>
+                <line class="chart-gridline" x1="40" y1="94" x2="348" y2="94" stroke="#E3DFDA" stroke-width="1" stroke-dasharray="5 5"/>
+                <line class="chart-ref" x1="40" y1="113" x2="348" y2="113" stroke="#D4C4E8" stroke-width="1.25" stroke-dasharray="4 4"/>
+                <line class="chart-ref" x1="40" y1="34.1" x2="348" y2="34.1" stroke="#B8D9CB" stroke-width="1.25" stroke-dasharray="4 4"/>
+              </g>
+              <polygon class="chart-area" points="40,132 40,14 91.3,76.1 142.7,87.8 194,59.3 245.3,84.5 296.7,54.3 348,81.1 348,132" fill="url(#tsh-fill)"/>
+              <path class="chart-line" d="M 40 14 L 91.3 76.1 L 142.7 87.8 L 194 59.3 L 245.3 84.5 L 296.7 54.3 L 348 81.1" fill="none" stroke="#9B8AD4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <g class="chart-points">
+                <circle class="chart-point" style="--point-i: 0" cx="40" cy="14" r="3" fill="#FAF7F4" stroke="#C9B8E8" stroke-width="2"/>
+                <circle class="chart-point" style="--point-i: 1" cx="91.3" cy="76.1" r="3" fill="#FAF7F4" stroke="#C9B8E8" stroke-width="2"/>
+                <circle class="chart-point" style="--point-i: 2" cx="142.7" cy="87.8" r="3" fill="#FAF7F4" stroke="#C9B8E8" stroke-width="2"/>
+                <circle class="chart-point" style="--point-i: 3" cx="194" cy="59.3" r="3" fill="#FAF7F4" stroke="#C9B8E8" stroke-width="2"/>
+                <circle class="chart-point" style="--point-i: 4" cx="245.3" cy="84.5" r="3" fill="#FAF7F4" stroke="#C9B8E8" stroke-width="2"/>
+                <circle class="chart-point" style="--point-i: 5" cx="296.7" cy="54.3" r="3" fill="#FAF7F4" stroke="#C9B8E8" stroke-width="2"/>
+              </g>
+              <g class="chart-tooltip">
+                <rect class="chart-tooltip__bubble" x="317" y="44" width="62" height="28" rx="14" fill="#272D4A"/>
+                <path class="chart-tooltip__tail" d="M348 72 L343.5 78 L352.5 78 Z" fill="#272D4A"/>
+                <text class="chart-tooltip__value" x="348" y="58" text-anchor="middle" font-size="11" font-weight="700" fill="#fff" font-family="Nunito,sans-serif">2.2</text>
+                <text class="chart-tooltip__label" x="348" y="67" text-anchor="middle" font-size="6.5" font-weight="600" fill="rgba(255,255,255,0.72)" font-family="Nunito,sans-serif">Current</text>
+              </g>
+              <circle class="chart-marker" cx="348" cy="81.1" r="4" fill="#272D4A" stroke="#fff" stroke-width="1.5"/>
+              <g class="chart-labels">
+                <text x="34" y="121" text-anchor="end" font-size="8" fill="#fff" font-weight="600" font-family="Nunito,sans-serif">0.0</text>
+                <text x="34" y="116" text-anchor="end" font-size="8" fill="#fff" font-weight="600" font-family="Nunito,sans-serif">0.3</text>
+                <text x="34" y="37.1" text-anchor="end" font-size="8" fill="#fff" font-weight="600" font-family="Nunito,sans-serif">5.0</text>
+                <text x="34" y="17" text-anchor="end" font-size="8" fill="#fff" font-weight="600" font-family="Nunito,sans-serif">6.2</text>
+                <text x="40" y="148" text-anchor="middle" font-size="8" fill="#fff" font-weight="600" font-family="Nunito,sans-serif">Oct 18</text>
+                <text x="91.3" y="148" text-anchor="middle" font-size="8" fill="#fff" font-weight="600" font-family="Nunito,sans-serif">Feb 09</text>
+                <text x="142.7" y="148" text-anchor="middle" font-size="8" fill="#fff" font-weight="600" font-family="Nunito,sans-serif">Aug 26</text>
+                <text x="194" y="148" text-anchor="middle" font-size="8" fill="#fff" font-weight="600" font-family="Nunito,sans-serif">Feb 20</text>
+                <text x="245.3" y="148" text-anchor="middle" font-size="8" fill="#fff" font-weight="600" font-family="Nunito,sans-serif">Apr 29</text>
+                <text x="296.7" y="148" text-anchor="middle" font-size="8" fill="#fff" font-weight="600" font-family="Nunito,sans-serif">May 26</text>
+                <text x="348" y="148" text-anchor="middle" font-size="8" fill="#fff" font-weight="700" font-family="Nunito,sans-serif">Jun 10</text>
+              </g>
+            </svg>
+        </article>
+      </aside>
+    </div>
+
+    <a class="scroll-hint" href="#features">
+      <span>Scroll to discover</span>
+      <span class="scroll-hint__icon" aria-hidden="true">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M7 3v8M4 8l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+    </a>
+  </section>
+
+  <main>
+    <section class="features lazy-section" id="features">
+      <div class="container">
+        <div class="section-head lazy-item">
+          <p class="eyebrow">Built for thyroid life</p>
+          <h2>Helping you <em>take control</em> of your chronic health</h2>
+          <p class="section-lead">Designed for people living with Hashimoto's, hypothyroidism, and related conditions. We don't diagnose, dose, or replace your clinician.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card lazy-item">
+            <span class="feature-label">01</span>
+            <h3>Track your health</h3>
+            <p>Log mood, energy, symptoms, and optional cycle patterns in under a minute, so daily context lives alongside your labs.</p>
+          </article>
+          <article class="feature-card lazy-item">
+            <span class="feature-label">02</span>
+            <h3>Manage Labs</h3>
+            <p>Upload thyroid panels, see trends for TSH, free T4/T3, and antibodies, and keep every draw in one private timeline.</p>
+          </article>
+          <article class="feature-card lazy-item">
+            <span class="feature-label">03</span>
+            <h3>Ask Calypso Assistant</h3>
+            <p>Your AI wellness companion, grounded in peer-reviewed research and your own logged data, always with citations.</p>
+          </article>
+          <article class="feature-card lazy-item">
+            <span class="feature-label">04</span>
+            <h3>Connect your devices</h3>
+            <p>Connect Apple Health and Oura Ring for sleep, activity, and heart data. More wearables are on the roadmap.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works lazy-section" id="how-it-works">
+      <div class="container">
+        <div class="section-head section-head--center lazy-item">
+          <p class="eyebrow">How it works</p>
+          <h2>From scattered records to <em>clarity</em></h2>
+        </div>
+
+        <ol class="steps">
+          <li class="lazy-item">
+            <span class="step-num">1</span>
+            <div>
+              <h3>Capture daily context</h3>
+              <p>Quick check-ins for mood and symptoms, plus optional cycle logging when it matters for you.</p>
+            </div>
+          </li>
+          <li class="lazy-item">
+            <span class="step-num">2</span>
+            <div>
+              <h3>Bring your labs together</h3>
+              <p>Upload PDFs or photos. Calypso parses results on-device and charts them over time.</p>
+            </div>
+          </li>
+          <li class="lazy-item">
+            <span class="step-num">3</span>
+            <div>
+              <h3>Walk into visits prepared</h3>
+              <p>Review trends, ask Calypso questions, and export what you need before you see your clinician.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="waitlist lazy-section" id="waitlist">
+      <div class="container waitlist-inner">
+        <div class="waitlist-copy">
+          <p class="eyebrow">Early access</p>
+          <h2>Be first to try Calypso.</h2>
+          <p>We're preparing a TestFlight beta for iPhone. Join the waitlist and we'll reach out when a spot opens.</p>
+        </div>
+        <form class="waitlist-form" id="waitlist-form" action="#" method="post" novalidate>
+          <label class="sr-only" for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+          <input type="hidden" name="_subject" value="Calypso Health waitlist signup" />
+          <button type="submit" class="btn btn-primary" id="waitlist-submit">Join waitlist</button>
+        </form>
+        <p class="form-status" id="waitlist-status" role="status" aria-live="polite" hidden></p>
+        <p class="form-note">No spam. Unsubscribe anytime. · Coming soon to iPhone<br />By joining, you agree we may email you about early access.</p>
+      </div>
+    </section>
+
+    <section class="disclaimer lazy-section">
+      <div class="container">
+        <p><strong>Important:</strong> Calypso Health does not diagnose conditions, recommend medication changes, or replace care from your clinician. All data is for your personal health record.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer lazy-section">
+    <div class="container footer-inner">
+      <span class="footer-logo">calypso</span>
+      <span>© 2026 Calypso Health</span>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#features">Features</a>
+        <a href="#waitlist">Waitlist</a>
+        <a href="mailto:hello@calypsohealth.com">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script>
+    (function () {
+      var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      function loadImage(img) {
+        var src = img.getAttribute("data-src");
+        if (!src || img.getAttribute("src")) return;
+        img.setAttribute("src", src);
+        img.addEventListener("load", function () {
+          img.closest(".hero-bg").classList.add("has-photo");
+        }, { once: true });
+        img.addEventListener("error", function () {
+          img.remove();
+        }, { once: true });
+      }
+
+      function revealSection(section) {
+        if (section.classList.contains("is-visible")) return;
+        section.classList.add("is-visible");
+        section.querySelectorAll("img[data-src]").forEach(loadImage);
+      }
+
+      function animateTshChart(chart) {
+        if (!chart || chart.classList.contains("is-animated")) return;
+        var line = chart.querySelector(".chart-line");
+        if (line && typeof line.getTotalLength === "function") {
+          chart.style.setProperty("--line-length", line.getTotalLength());
+        }
+        chart.classList.add("is-animated");
+      }
+
+      function setupChartAnimation() {
+        var showcase = document.querySelector(".lab-showcase");
+        var chart = document.querySelector(".tsh-chart");
+        if (!chart) return;
+
+        if (reducedMotion) {
+          animateTshChart(chart);
+          return;
+        }
+
+        if ("IntersectionObserver" in window && showcase) {
+          var chartObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                window.setTimeout(function () {
+                  animateTshChart(chart);
+                }, 350);
+                chartObserver.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.35 });
+
+          chartObserver.observe(showcase);
+        } else {
+          animateTshChart(chart);
+        }
+      }
+
+      if (reducedMotion) {
+        document.querySelectorAll(".lazy-section").forEach(revealSection);
+        document.querySelectorAll(".hero-bg__photo[data-src]").forEach(loadImage);
+      } else if ("IntersectionObserver" in window) {
+        var sectionObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              revealSection(entry.target);
+              sectionObserver.unobserve(entry.target);
+            }
+          });
+        }, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
+
+        document.querySelectorAll(".lazy-section").forEach(function (section) {
+          sectionObserver.observe(section);
+        });
+
+        var heroPhoto = document.querySelector(".hero-bg__photo[data-src]");
+        if (heroPhoto) {
+          var loadHeroPhoto = function () {
+            loadImage(heroPhoto);
+          };
+          if ("requestIdleCallback" in window) {
+            requestIdleCallback(loadHeroPhoto, { timeout: 1800 });
+          } else {
+            window.setTimeout(loadHeroPhoto, 400);
+          }
+        }
+      } else {
+        document.querySelectorAll(".lazy-section").forEach(revealSection);
+        document.querySelectorAll(".hero-bg__photo[data-src]").forEach(loadImage);
+      }
+
+      setupChartAnimation();
+
+      (function setupWaitlistForm() {
+        var form = document.getElementById("waitlist-form");
+        var input = document.getElementById("email");
+        var btn = document.getElementById("waitlist-submit");
+        var status = document.getElementById("waitlist-status");
+        if (!form || !input || !btn || !status) return;
+
+        var config = window.CALYPSO_CONFIG || {};
+        var supabaseUrl = (config.supabaseUrl || "").replace(/\/$/, "");
+        var supabaseAnonKey = config.supabaseAnonKey || "";
+        var isConfigured = Boolean(supabaseUrl && supabaseAnonKey);
+
+        function setStatus(message, type) {
+          status.hidden = !message;
+          status.textContent = message || "";
+          status.className = "form-status" + (type ? " form-status--" + type : "");
+        }
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          var email = (input.value || "").trim().toLowerCase();
+          if (!email || !input.checkValidity()) {
+            setStatus("Please enter a valid email address.", "error");
+            input.focus();
+            return;
+          }
+
+          if (!isConfigured) {
+            setStatus("Waitlist isn’t connected yet. Check config.js.", "error");
+            return;
+          }
+
+          btn.disabled = true;
+          btn.textContent = "Joining…";
+          setStatus("");
+
+          fetch(supabaseUrl + "/rest/v1/waitlist_signups", {
+            method: "POST",
+            headers: {
+              apikey: supabaseAnonKey,
+              Authorization: "Bearer " + supabaseAnonKey,
+              "Content-Type": "application/json",
+              Prefer: "return=minimal",
+            },
+            body: JSON.stringify({
+              email: email,
+              source: "website",
+            }),
+          })
+            .then(function (res) {
+              if (res.ok || res.status === 201) return;
+
+              return res.text().then(function (text) {
+                var message = "Something went wrong.";
+                try {
+                  var data = JSON.parse(text);
+                  if (data && data.code === "23505") {
+                    message = "duplicate";
+                  } else if (data && data.message) {
+                    message = data.message;
+                  }
+                } catch (_) {}
+                var err = new Error(message);
+                err.status = res.status;
+                throw err;
+              });
+            })
+            .then(function () {
+              btn.textContent = "You're on the list!";
+              input.disabled = true;
+              setStatus("Thanks! We’ll email you when a TestFlight spot opens.", "success");
+            })
+            .catch(function (err) {
+              if (err && err.message === "duplicate") {
+                btn.textContent = "You're on the list!";
+                input.disabled = true;
+                setStatus("You’re already on the waitlist. We’ll be in touch.", "success");
+                return;
+              }
+              btn.disabled = false;
+              btn.textContent = "Join waitlist";
+              setStatus("Couldn’t join right now. Please try again in a moment.", "error");
+            });
+        });
+      })();
+    })();
+  </script>
+</body>
+</html>

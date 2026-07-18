@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 148" role="img" aria-label="TSH lab trend from 2017 to 2019">
+  <title>TSH trend over time</title>
+  <rect x="40" y="14" width="308" height="104" fill="rgba(255,255,255,0.08)" rx="4" stroke="#fff" stroke-opacity="0.22" stroke-width="1"/>
+  <rect x="40" y="113" width="308" height="5" fill="rgba(255,255,255,0.06)"/>
+  <rect x="40" y="34.1" width="308" height="78.9" fill="rgba(255,255,255,0.1)"/>
+  <rect x="40" y="14" width="308" height="20.1" fill="rgba(255,255,255,0.05)"/>
+  <line x1="40" y1="113" x2="348" y2="113" stroke="#fff" stroke-width="1" stroke-dasharray="4 3" opacity="0.55"/>
+  <line x1="40" y1="34.1" x2="348" y2="34.1" stroke="#fff" stroke-width="1" stroke-dasharray="4 3" opacity="0.55"/>
+  <defs>
+    <linearGradient id="tsh-fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <polygon points="40,118 40,14 91.3,76.1 142.7,87.8 194,59.3 245.3,84.5 296.7,54.3 348,81.1 348,118" fill="url(#tsh-fill)"/>
+  <path d="M 40 14 L 91.3 76.1 L 142.7 87.8 L 194 59.3 L 245.3 84.5 L 296.7 54.3 L 348 81.1" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="40" cy="14" r="3.5" fill="rgba(255,255,255,0.95)" stroke="#fff" stroke-width="2"/>
+  <circle cx="91.3" cy="76.1" r="3.5" fill="rgba(255,255,255,0.95)" stroke="#fff" stroke-width="2"/>
+  <circle cx="142.7" cy="87.8" r="3.5" fill="rgba(255,255,255,0.95)" stroke="#fff" stroke-width="2"/>
+  <circle cx="194" cy="59.3" r="3.5" fill="rgba(255,255,255,0.95)" stroke="#fff" stroke-width="2"/>
+  <circle cx="245.3" cy="84.5" r="3.5" fill="rgba(255,255,255,0.95)" stroke="#fff" stroke-width="2"/>
+  <circle cx="296.7" cy="54.3" r="3.5" fill="rgba(255,255,255,0.95)" stroke="#fff" stroke-width="2"/>
+  <circle cx="348" cy="81.1" r="3.5" fill="rgba(255,255,255,0.95)" stroke="#fff" stroke-width="2"/>
+  <text x="34" y="121" text-anchor="end" font-size="8" fill="#fff" fill-opacity="0.72" font-weight="700" font-family="Nunito,sans-serif">0.0</text>
+  <text x="34" y="116" text-anchor="end" font-size="8" fill="#fff" fill-opacity="0.72" font-weight="700" font-family="Nunito,sans-serif">0.3</text>
+  <text x="34" y="37.1" text-anchor="end" font-size="8" fill="#fff" fill-opacity="0.72" font-weight="700" font-family="Nunito,sans-serif">5.0</text>
+  <text x="34" y="17" text-anchor="end" font-size="8" fill="#fff" fill-opacity="0.72" font-weight="700" font-family="Nunito,sans-serif">6.2</text>
+  <text x="40" y="142" text-anchor="middle" font-size="8" fill="#fff" fill-opacity="0.65" font-weight="600" font-family="Nunito,sans-serif">Oct 18</text>
+  <text x="91.3" y="142" text-anchor="middle" font-size="8" fill="#fff" fill-opacity="0.65" font-weight="600" font-family="Nunito,sans-serif">Feb 09</text>
+  <text x="142.7" y="142" text-anchor="middle" font-size="8" fill="#fff" fill-opacity="0.65" font-weight="600" font-family="Nunito,sans-serif">Aug 26</text>
+  <text x="194" y="142" text-anchor="middle" font-size="8" fill="#fff" fill-opacity="0.65" font-weight="600" font-family="Nunito,sans-serif">Feb 20</text>
+  <text x="245.3" y="142" text-anchor="middle" font-size="8" fill="#fff" fill-opacity="0.65" font-weight="600" font-family="Nunito,sans-serif">Apr 29</text>
+  <text x="296.7" y="142" text-anchor="middle" font-size="8" fill="#fff" fill-opacity="0.65" font-weight="600" font-family="Nunito,sans-serif">May 26</text>
+  <text x="348" y="142" text-anchor="middle" font-size="8" fill="#fff" fill-opacity="0.65" font-weight="600" font-family="Nunito,sans-serif">Jun 10</text>
+</svg>
