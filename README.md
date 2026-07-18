@@ -2,6 +2,8 @@
 
 Public marketing site and waitlist for [Calypso Health](https://calypsoai.health).
 
+![Calypso Health header](docs/header.png)
+
 ## Local preview
 
 ```bash
