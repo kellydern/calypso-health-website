@@ -902,6 +902,15 @@ em {
     width: 100%;
   }
 
+  .waitlist-form input {
+    height: 30px;
+    max-height: 30px;
+    padding: 0 1rem;
+    font-size: 0.875rem;
+    line-height: 30px;
+    box-sizing: border-box;
+  }
+
   .scroll-hint span:first-child {
     display: none;
   }
