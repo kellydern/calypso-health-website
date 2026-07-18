@@ -4,6 +4,7 @@
   --lavender: #8b82e6;
   --mint: #62b896;
   --peach: #e5a67a;
+  --blush: #f0c2cc;
   --navy: #272d4a;
   --bg: #f2f4fa;
   --accent-tint: #eef0fa;
@@ -27,14 +28,6 @@
   --font-hero-script: "Instrument Serif", Georgia, serif;
   --max-w: 1120px;
 }
-
-
-
-
-
-
-
-
 
 *,
 *::before,
@@ -699,7 +692,7 @@ em {
 }
 
 .waitlist-inner .eyebrow {
-  color: var(--peach);
+  color: var(--blush);
 }
 
 .waitlist-form {
@@ -758,6 +751,12 @@ em {
   font-size: 0.8125rem;
   color: rgba(255, 255, 255, 0.5);
   line-height: 1.55;
+}
+
+.form-note a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .form-status {
