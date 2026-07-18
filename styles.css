@@ -20,7 +20,7 @@
   --radius: 16px;
   --radius-lg: 24px;
   --shadow: 0 4px 24px rgba(39, 45, 74, 0.08);
-  --font: "Nunito", -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+  --font: "DM Sans", -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
   --font-brand: "DM Sans", var(--font);
   --font-heading: "DM Sans", var(--font);
   --font-heading-italic: "Instrument Serif", Georgia, serif;
@@ -28,6 +28,12 @@
   --font-hero-script: "Instrument Serif", Georgia, serif;
   --max-w: 1120px;
 }
+
+
+
+
+
+
 
 *,
 *::before,
