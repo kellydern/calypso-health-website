@@ -350,14 +350,70 @@
         if (!form || !input || !btn || !status) return;
 
         var config = window.CALYPSO_CONFIG || {};
+        var notifyEmail = config.notifyEmail || "kelly@calypsoai.health";
         var supabaseUrl = (config.supabaseUrl || "").replace(/\/$/, "");
         var supabaseAnonKey = config.supabaseAnonKey || "";
-        var isConfigured = Boolean(supabaseUrl && supabaseAnonKey);
+        var canSave = Boolean(supabaseUrl && supabaseAnonKey);
+        var canEmail = Boolean(notifyEmail);
 
         function setStatus(message, type) {
           status.hidden = !message;
           status.textContent = message || "";
           status.className = "form-status" + (type ? " form-status--" + type : "");
+        }
+
+        function saveToSupabase(email) {
+          if (!canSave) return Promise.resolve({ ok: false, skipped: true });
+          return fetch(supabaseUrl + "/rest/v1/waitlist_signups", {
+            method: "POST",
+            headers: {
+              apikey: supabaseAnonKey,
+              Authorization: "Bearer " + supabaseAnonKey,
+              "Content-Type": "application/json",
+              Prefer: "return=minimal",
+            },
+            body: JSON.stringify({
+              email: email,
+              source: "website",
+            }),
+          }).then(function (res) {
+            if (res.ok || res.status === 201) return { ok: true };
+            return res.text().then(function (text) {
+              try {
+                var data = JSON.parse(text);
+                if (data && data.code === "23505") return { ok: true, duplicate: true };
+              } catch (_) {}
+              return { ok: false };
+            });
+          }).catch(function () {
+            return { ok: false };
+          });
+        }
+
+        function emailKelly(email) {
+          if (!canEmail) return Promise.resolve({ ok: false, skipped: true });
+          return fetch("https://formsubmit.co/ajax/" + encodeURIComponent(notifyEmail), {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            body: JSON.stringify({
+              email: email,
+              _subject: "New Calypso waitlist signup",
+              _template: "table",
+              _captcha: "false",
+              message: email + " joined the Calypso Health waitlist.",
+            }),
+          }).then(function (res) {
+            return res.json().then(function (data) {
+              return { ok: Boolean(res.ok && data && data.success !== "false") };
+            }).catch(function () {
+              return { ok: res.ok };
+            });
+          }).catch(function () {
+            return { ok: false };
+          });
         }
 
         form.addEventListener("submit", function (e) {
@@ -370,7 +426,7 @@
             return;
           }
 
-          if (!isConfigured) {
+          if (!canSave && !canEmail) {
             setStatus("Waitlist isn’t connected yet. Check config.js.", "error");
             return;
           }
@@ -379,53 +435,19 @@
           btn.textContent = "Joining…";
           setStatus("");
 
-          fetch(supabaseUrl + "/rest/v1/waitlist_signups", {
-            method: "POST",
-            headers: {
-              apikey: supabaseAnonKey,
-              Authorization: "Bearer " + supabaseAnonKey,
-              "Content-Type": "application/json",
-              Prefer: "return=minimal",
-            },
-            body: JSON.stringify({
-              email: email,
-              source: "website",
-            }),
-          })
-            .then(function (res) {
-              if (res.ok || res.status === 201) return;
-
-              return res.text().then(function (text) {
-                var message = "Something went wrong.";
-                try {
-                  var data = JSON.parse(text);
-                  if (data && data.code === "23505") {
-                    message = "duplicate";
-                  } else if (data && data.message) {
-                    message = data.message;
-                  }
-                } catch (_) {}
-                var err = new Error(message);
-                err.status = res.status;
-                throw err;
-              });
-            })
-            .then(function () {
+          Promise.all([saveToSupabase(email), emailKelly(email)]).then(function (results) {
+            var saved = results[0] && results[0].ok;
+            var emailed = results[1] && results[1].ok;
+            if (saved || emailed) {
               btn.textContent = "You're on the list!";
               input.disabled = true;
               setStatus("Thanks! We’ll email you when a TestFlight spot opens.", "success");
-            })
-            .catch(function (err) {
-              if (err && err.message === "duplicate") {
-                btn.textContent = "You're on the list!";
-                input.disabled = true;
-                setStatus("You’re already on the waitlist. We’ll be in touch.", "success");
-                return;
-              }
-              btn.disabled = false;
-              btn.textContent = "Join waitlist";
-              setStatus("Couldn’t join right now. Please try again in a moment.", "error");
-            });
+              return;
+            }
+            btn.disabled = false;
+            btn.textContent = "Join waitlist";
+            setStatus("Couldn’t join right now. Please try again in a moment.", "error");
+          });
         });
       })();
     })();
