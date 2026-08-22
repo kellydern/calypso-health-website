@@ -21,7 +21,7 @@
   --radius-lg: 28px;
   --shadow: 0 4px 24px rgba(39, 45, 74, 0.08);
   --font: "DM Sans", -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
-  --font-brand: "DM Sans", var(--font);
+  --font-brand: "Instrument Serif", Georgia, serif;
   --font-heading: "DM Sans", var(--font);
   --font-heading-italic: "Instrument Serif", Georgia, serif;
   --font-hero: "DM Sans", var(--font);
@@ -157,8 +157,8 @@ em {
 .footer-logo {
   font-family: var(--font-brand);
   font-size: 1.75rem;
-  font-weight: 600;
-  font-style: normal;
+  font-weight: 400;
+  font-style: italic;
   letter-spacing: -0.02em;
   color: inherit;
 }
