@@ -21,12 +21,28 @@
   --radius-lg: 28px;
   --shadow: 0 4px 24px rgba(39, 45, 74, 0.08);
   --font: "DM Sans", -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
-  --font-brand: "Instrument Serif", Georgia, serif;
+  --font-brand: "Sharp Serif Display", Georgia, serif;
   --font-heading: "DM Sans", var(--font);
-  --font-heading-italic: "Instrument Serif", Georgia, serif;
+  --font-heading-italic: "Sharp Serif Display", Georgia, serif;
   --font-hero: "DM Sans", var(--font);
-  --font-hero-script: "Instrument Serif", Georgia, serif;
+  --font-hero-script: "Sharp Serif Display", Georgia, serif;
   --max-w: 1120px;
+}
+
+@font-face {
+  font-family: "Sharp Serif Display";
+  src: url("fonts/SharpSerifDisplay-Regular-Trial.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sharp Serif Display";
+  src: url("fonts/SharpSerifDisplay-Italic-Trial.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
 }
 
 
@@ -161,6 +177,13 @@ em {
   font-style: italic;
   letter-spacing: -0.02em;
   color: inherit;
+}
+
+.logo-health {
+  font-family: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  letter-spacing: inherit;
 }
 
 .nav {
