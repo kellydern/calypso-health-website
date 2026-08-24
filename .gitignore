@@ -2,10 +2,12 @@
 .AppleDouble
 .env
 .env.*
+
+# Trial / unlicensed desktop fonts — do not publish
+fonts/*Trial*
+fonts/*TRIAL*
 fonts/*.otf
 fonts/*.ttf
-fonts/*.woff
-fonts/*.woff2
 
 # Local Netlify folder
 .netlify
