@@ -21,15 +21,15 @@
   <circle cx="245.3" cy="84.5" r="3.5" fill="rgba(255,255,255,0.95)" stroke="#fff" stroke-width="2"/>
   <circle cx="296.7" cy="54.3" r="3.5" fill="rgba(255,255,255,0.95)" stroke="#fff" stroke-width="2"/>
   <circle cx="348" cy="81.1" r="3.5" fill="rgba(255,255,255,0.95)" stroke="#fff" stroke-width="2"/>
-  <text x="34" y="121" text-anchor="end" font-size="8" fill="#fff" fill-opacity="0.72" font-weight="700" font-family="DM Sans,sans-serif">0.0</text>
-  <text x="34" y="116" text-anchor="end" font-size="8" fill="#fff" fill-opacity="0.72" font-weight="700" font-family="DM Sans,sans-serif">0.3</text>
-  <text x="34" y="37.1" text-anchor="end" font-size="8" fill="#fff" fill-opacity="0.72" font-weight="700" font-family="DM Sans,sans-serif">5.0</text>
-  <text x="34" y="17" text-anchor="end" font-size="8" fill="#fff" fill-opacity="0.72" font-weight="700" font-family="DM Sans,sans-serif">6.2</text>
-  <text x="40" y="142" text-anchor="middle" font-size="8" fill="#fff" fill-opacity="0.65" font-weight="600" font-family="DM Sans,sans-serif">Oct 18</text>
-  <text x="91.3" y="142" text-anchor="middle" font-size="8" fill="#fff" fill-opacity="0.65" font-weight="600" font-family="DM Sans,sans-serif">Feb 09</text>
-  <text x="142.7" y="142" text-anchor="middle" font-size="8" fill="#fff" fill-opacity="0.65" font-weight="600" font-family="DM Sans,sans-serif">Aug 26</text>
-  <text x="194" y="142" text-anchor="middle" font-size="8" fill="#fff" fill-opacity="0.65" font-weight="600" font-family="DM Sans,sans-serif">Feb 20</text>
-  <text x="245.3" y="142" text-anchor="middle" font-size="8" fill="#fff" fill-opacity="0.65" font-weight="600" font-family="DM Sans,sans-serif">Apr 29</text>
-  <text x="296.7" y="142" text-anchor="middle" font-size="8" fill="#fff" fill-opacity="0.65" font-weight="600" font-family="DM Sans,sans-serif">May 26</text>
-  <text x="348" y="142" text-anchor="middle" font-size="8" fill="#fff" fill-opacity="0.65" font-weight="600" font-family="DM Sans,sans-serif">Jun 10</text>
+  <text x="34" y="121" text-anchor="end" font-size="8" fill="#fff" fill-opacity="0.72" font-weight="700" font-family="Aeonik,sans-serif">0.0</text>
+  <text x="34" y="116" text-anchor="end" font-size="8" fill="#fff" fill-opacity="0.72" font-weight="700" font-family="Aeonik,sans-serif">0.3</text>
+  <text x="34" y="37.1" text-anchor="end" font-size="8" fill="#fff" fill-opacity="0.72" font-weight="700" font-family="Aeonik,sans-serif">5.0</text>
+  <text x="34" y="17" text-anchor="end" font-size="8" fill="#fff" fill-opacity="0.72" font-weight="700" font-family="Aeonik,sans-serif">6.2</text>
+  <text x="40" y="142" text-anchor="middle" font-size="8" fill="#fff" fill-opacity="0.65" font-weight="600" font-family="Aeonik,sans-serif">Oct 18</text>
+  <text x="91.3" y="142" text-anchor="middle" font-size="8" fill="#fff" fill-opacity="0.65" font-weight="600" font-family="Aeonik,sans-serif">Feb 09</text>
+  <text x="142.7" y="142" text-anchor="middle" font-size="8" fill="#fff" fill-opacity="0.65" font-weight="600" font-family="Aeonik,sans-serif">Aug 26</text>
+  <text x="194" y="142" text-anchor="middle" font-size="8" fill="#fff" fill-opacity="0.65" font-weight="600" font-family="Aeonik,sans-serif">Feb 20</text>
+  <text x="245.3" y="142" text-anchor="middle" font-size="8" fill="#fff" fill-opacity="0.65" font-weight="600" font-family="Aeonik,sans-serif">Apr 29</text>
+  <text x="296.7" y="142" text-anchor="middle" font-size="8" fill="#fff" fill-opacity="0.65" font-weight="600" font-family="Aeonik,sans-serif">May 26</text>
+  <text x="348" y="142" text-anchor="middle" font-size="8" fill="#fff" fill-opacity="0.65" font-weight="600" font-family="Aeonik,sans-serif">Jun 10</text>
 </svg>

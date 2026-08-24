@@ -20,11 +20,11 @@
   --radius: 28px;
   --radius-lg: 28px;
   --shadow: 0 4px 24px rgba(39, 45, 74, 0.08);
-  --font: "DM Sans", -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+  --font: "Aeonik", -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
   --font-brand: "Sharp Serif Text", Georgia, serif;
-  --font-heading: "DM Sans", var(--font);
+  --font-heading: "Aeonik", var(--font);
   --font-heading-italic: "Sharp Serif Text", Georgia, serif;
-  --font-hero: "DM Sans", var(--font);
+  --font-hero: "Aeonik", var(--font);
   --font-hero-script: "Sharp Serif Text", Georgia, serif;
   --max-w: 1120px;
 }
@@ -49,11 +49,86 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Aeonik";
+  src:
+    url("fonts/aeonik-light.woff2") format("woff2"),
+    url("fonts/aeonik-light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
 
+@font-face {
+  font-family: "Aeonik";
+  src:
+    url("fonts/aeonik-lightitalic.woff2") format("woff2"),
+    url("fonts/aeonik-lightitalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
 
+@font-face {
+  font-family: "Aeonik";
+  src:
+    url("fonts/aeonik-regular.woff2") format("woff2"),
+    url("fonts/aeonik-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
+@font-face {
+  font-family: "Aeonik";
+  src:
+    url("fonts/aeonik-regularitalic.woff2") format("woff2"),
+    url("fonts/aeonik-regularitalic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
 
+@font-face {
+  font-family: "Aeonik";
+  src:
+    url("fonts/aeonik-medium.woff2") format("woff2"),
+    url("fonts/aeonik-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 
+@font-face {
+  font-family: "Aeonik";
+  src:
+    url("fonts/aeonik-mediumitalic.woff2") format("woff2"),
+    url("fonts/aeonik-mediumitalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Essentials package has no SemiBold/Bold — map 600/700 to Medium. */
+@font-face {
+  font-family: "Aeonik";
+  src:
+    url("fonts/aeonik-medium.woff2") format("woff2"),
+    url("fonts/aeonik-medium.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src:
+    url("fonts/aeonik-medium.woff2") format("woff2"),
+    url("fonts/aeonik-medium.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 *,
 *::before,
