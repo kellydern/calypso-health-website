@@ -21,7 +21,10 @@
   <meta name="twitter:title" content="Calypso Health | Hashimoto’s companion for mood, cycle &amp; labs" />
   <meta name="twitter:description" content="Calypso Health is a Hashimoto’s companion for mood, cycle, labs, and AI-guided wellness insights." />
   <meta name="twitter:image" content="https://calypsoai.health/images/og.png" />
-  <link rel="stylesheet" href="styles.css?v=ls-05" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=sst-med" />
 </head>
 <body>
   <section class="hero-full" id="top">
@@ -218,6 +221,7 @@
           <input type="hidden" name="_subject" value="New Calypso waitlist signup" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="message" id="waitlist-message" value="" />
           <input type="hidden" name="_next" value="https://calypsoai.health/?joined=1#waitlist" />
           <button type="submit" class="btn btn-primary" id="waitlist-submit">Join waitlist</button>
         </form>
@@ -374,8 +378,8 @@
         }
 
         function saveToSupabase(email) {
-          if (!supabaseUrl || !supabaseAnonKey) return;
-          fetch(supabaseUrl + "/rest/v1/waitlist_signups", {
+          if (!supabaseUrl || !supabaseAnonKey) return Promise.resolve(false);
+          return fetch(supabaseUrl + "/rest/v1/waitlist_signups", {
             method: "POST",
             headers: {
               apikey: supabaseAnonKey,
@@ -384,10 +388,20 @@
               Prefer: "return=minimal",
             },
             body: JSON.stringify({ email: email, source: "website" }),
-          }).catch(function () {});
+          })
+            .then(function (res) {
+              return res.ok;
+            })
+            .catch(function () {
+              return false;
+            });
         }
 
         function notifyKelly(email) {
+          var message = email + " joined the Calypso Health waitlist.";
+          var messageField = document.getElementById("waitlist-message");
+          if (messageField) messageField.value = message;
+
           return fetch("https://formsubmit.co/ajax/" + encodeURIComponent(notifyEmail), {
             method: "POST",
             headers: {
@@ -399,27 +413,29 @@
               _subject: "New Calypso waitlist signup",
               _template: "table",
               _captcha: "false",
-              message: email + " joined the Calypso Health waitlist.",
+              message: message,
             }),
-          }).then(function (res) {
-            return res.text().then(function (text) {
-              if (!res.ok) return false;
-              try {
-                var data = JSON.parse(text);
-                return Boolean(
-                  data &&
-                    (data.success === true ||
-                      data.success === "true" ||
-                      data.message ||
-                      data.result === "success")
-                );
-              } catch (_) {
-                return true;
-              }
+          })
+            .then(function (res) {
+              return res.text().then(function (text) {
+                if (!res.ok) return false;
+                try {
+                  var data = JSON.parse(text);
+                  return Boolean(
+                    data &&
+                      (data.success === true ||
+                        data.success === "true" ||
+                        data.message ||
+                        data.result === "success")
+                  );
+                } catch (_) {
+                  return true;
+                }
+              });
+            })
+            .catch(function () {
+              return false;
             });
-          }).catch(function () {
-            return false;
-          });
         }
 
         form.addEventListener("submit", function onSubmit(e) {
@@ -436,12 +452,12 @@
           btn.textContent = "Joining…";
           setStatus("");
 
-          notifyKelly(email).then(function (sent) {
-            if (sent) {
-              saveToSupabase(email);
+          Promise.all([notifyKelly(email), saveToSupabase(email)]).then(function (results) {
+            if (results[0] || results[1]) {
               showSuccess();
               return;
             }
+
             form.removeEventListener("submit", onSubmit);
             HTMLFormElement.prototype.submit.call(form);
           });
