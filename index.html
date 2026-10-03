@@ -21,17 +21,19 @@
   <meta name="twitter:title" content="Calypso Health | Hashimoto’s companion for mood, cycle &amp; labs" />
   <meta name="twitter:description" content="Calypso Health is a Hashimoto’s companion for mood, cycle, labs, and AI-guided wellness insights." />
   <meta name="twitter:image" content="https://calypsoai.health/images/og.png" />
-  <link rel="stylesheet" href="styles.css?v=aeonik-ess" />
+  <link rel="stylesheet" href="styles.css?v=footer-credit" />
 </head>
 <body>
   <section class="hero-full" id="top">
     <div class="hero-bg" aria-hidden="true">
       <img
         class="hero-bg__photo"
-        data-src="images/hero-bg.jpg"
+        src="images/hero-illustration.jpg"
+        srcset="images/hero-illustration-1440.jpg 1440w, images/hero-illustration.jpg 2880w"
+        sizes="100vw"
         alt=""
         decoding="async"
-        fetchpriority="low"
+        fetchpriority="high"
       />
     </div>
     <div class="hero-overlay" aria-hidden="true"></div>
@@ -49,7 +51,7 @@
     <div class="hero-inner">
       <div class="hero-content">
         <h1>
-          Living with &amp; managing Hashimoto's is <em>your story</em> that belongs in one calm place
+          <span class="hero-nowrap">Living with &amp; managing</span> Hashimoto's is <em>your story</em> that belongs in one calm place
         </h1>
         <p class="hero-lead">
           We invite you to explore mood, cycle patterns, and thyroid labs in one private record, with compassionate, research-grounded guidance from Calypso by your side.
@@ -64,68 +66,6 @@
         </a>
       </div>
 
-      <aside class="lab-showcase" aria-label="Example thyroid lab chart">
-        <article class="lab-showcase__card">
-          <header class="lab-showcase__header">
-            <div class="lab-showcase__title-row">
-              <h2 class="lab-showcase__name">TSH</h2>
-              <span class="lab-showcase__status lab-showcase__status--good">Good</span>
-            </div>
-            <div class="lab-showcase__meta">
-              <p class="lab-showcase__value">2.2 <span>mIU/L</span></p>
-              <p class="lab-showcase__ref">Ref: 0.3 – 5.0 mIU/L</p>
-            </div>
-          </header>
-          <svg class="lab-showcase__chart tsh-chart" viewBox="0 0 360 168" role="img" aria-label="TSH lab trend from 2017 to 2019">
-              <title>TSH trend over time</title>
-              <defs>
-                <linearGradient id="tsh-fill" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#E8D4F0" stop-opacity="0.65"/>
-                  <stop offset="100%" stop-color="#F3E8F7" stop-opacity="0"/>
-                </linearGradient>
-              </defs>
-              <g class="chart-grid">
-                <rect class="chart-plot" x="40" y="14" width="308" height="118" rx="14" fill="none"/>
-                <line class="chart-gridline" x1="40" y1="17.3" x2="348" y2="17.3" stroke="#E3DFDA" stroke-width="1" stroke-dasharray="5 5"/>
-                <line class="chart-gridline" x1="40" y1="50.9" x2="348" y2="50.9" stroke="#E3DFDA" stroke-width="1" stroke-dasharray="5 5"/>
-                <line class="chart-gridline" x1="40" y1="84.5" x2="348" y2="84.5" stroke="#E3DFDA" stroke-width="1" stroke-dasharray="5 5"/>
-                <line class="chart-gridline" x1="40" y1="118" x2="348" y2="118" stroke="#E3DFDA" stroke-width="1" stroke-dasharray="5 5"/>
-                <line class="chart-ref" x1="40" y1="113" x2="348" y2="113" stroke="#D4C4E8" stroke-width="1.25" stroke-dasharray="4 4"/>
-                <line class="chart-ref chart-ref--high" x1="40" y1="34.1" x2="348" y2="34.1" stroke="#B8D9CB" stroke-width="1.25"/>
-              </g>
-              <polygon class="chart-area" points="40,132 40,14 91.3,76.1 142.7,87.8 194,59.3 245.3,84.5 296.7,54.3 348,81.1 348,132" fill="url(#tsh-fill)"/>
-              <path class="chart-line" d="M 40 14 L 91.3 76.1 L 142.7 87.8 L 194 59.3 L 245.3 84.5 L 296.7 54.3 L 348 81.1" fill="none" stroke="#9B8AD4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <g class="chart-points">
-                <circle class="chart-point" style="--point-i: 0" cx="40" cy="14" r="3" fill="#fff" stroke="#C9B8E8" stroke-width="2"/>
-                <circle class="chart-point" style="--point-i: 1" cx="91.3" cy="76.1" r="3" fill="#fff" stroke="#C9B8E8" stroke-width="2"/>
-                <circle class="chart-point" style="--point-i: 2" cx="142.7" cy="87.8" r="3" fill="#fff" stroke="#C9B8E8" stroke-width="2"/>
-                <circle class="chart-point" style="--point-i: 3" cx="194" cy="59.3" r="3" fill="#fff" stroke="#C9B8E8" stroke-width="2"/>
-                <circle class="chart-point" style="--point-i: 4" cx="245.3" cy="84.5" r="3" fill="#fff" stroke="#C9B8E8" stroke-width="2"/>
-                <circle class="chart-point" style="--point-i: 5" cx="296.7" cy="54.3" r="3" fill="#fff" stroke="#C9B8E8" stroke-width="2"/>
-              </g>
-              <g class="chart-tooltip">
-                <rect class="chart-tooltip__bubble" x="317" y="44" width="62" height="28" rx="14" fill="#272D4A"/>
-                <path class="chart-tooltip__tail" d="M348 72 L343.5 78 L352.5 78 Z" fill="#272D4A"/>
-                <text class="chart-tooltip__value" x="348" y="58" text-anchor="middle" font-size="11" font-weight="700" fill="#fff" font-family="Aeonik,sans-serif">2.2</text>
-                <text class="chart-tooltip__label" x="348" y="67" text-anchor="middle" font-size="6.5" font-weight="600" fill="rgba(255,255,255,0.72)" font-family="Aeonik,sans-serif">Current</text>
-              </g>
-              <circle class="chart-marker" cx="348" cy="81.1" r="4" fill="#272D4A" stroke="#fff" stroke-width="1.5"/>
-              <g class="chart-labels">
-                <text x="34" y="121" text-anchor="end" font-size="8" fill="#fff" font-weight="600" font-family="Aeonik,sans-serif">0</text>
-                <text x="34" y="87.5" text-anchor="end" font-size="8" fill="#fff" font-weight="600" font-family="Aeonik,sans-serif">2</text>
-                <text x="34" y="53.9" text-anchor="end" font-size="8" fill="#fff" font-weight="600" font-family="Aeonik,sans-serif">4</text>
-                <text x="34" y="20.3" text-anchor="end" font-size="8" fill="#fff" font-weight="600" font-family="Aeonik,sans-serif">6</text>
-                <text x="40" y="148" text-anchor="middle" font-size="8" fill="#fff" font-weight="600" font-family="Aeonik,sans-serif">Oct 18</text>
-                <text x="91.3" y="148" text-anchor="middle" font-size="8" fill="#fff" font-weight="600" font-family="Aeonik,sans-serif">Feb 09</text>
-                <text x="142.7" y="148" text-anchor="middle" font-size="8" fill="#fff" font-weight="600" font-family="Aeonik,sans-serif">Aug 26</text>
-                <text x="194" y="148" text-anchor="middle" font-size="8" fill="#fff" font-weight="600" font-family="Aeonik,sans-serif">Feb 20</text>
-                <text x="245.3" y="148" text-anchor="middle" font-size="8" fill="#fff" font-weight="600" font-family="Aeonik,sans-serif">Apr 29</text>
-                <text x="296.7" y="148" text-anchor="middle" font-size="8" fill="#fff" font-weight="600" font-family="Aeonik,sans-serif">May 26</text>
-                <text x="348" y="148" text-anchor="middle" font-size="8" fill="#fff" font-weight="700" font-family="Aeonik,sans-serif">Jun 10</text>
-              </g>
-            </svg>
-        </article>
-      </aside>
     </div>
 
     <a class="scroll-hint" href="#features">
@@ -219,6 +159,7 @@
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="message" id="waitlist-message" value="" />
+          <input type="hidden" name="_cc" value="andreea@calypsoai.health" />
           <input type="hidden" name="_next" value="https://calypsoai.health/?joined=1#waitlist" />
           <button type="submit" class="btn btn-primary" id="waitlist-submit">Join waitlist</button>
         </form>
@@ -238,6 +179,7 @@
     <div class="container footer-inner">
       <span class="footer-logo">calypso health</span>
       <span>© 2026 Calypso Health</span>
+      <span class="footer-credit">Illustration by <a href="https://kimsalt.com/" target="_blank" rel="noopener noreferrer">Kim Salt</a></span>
       <nav class="footer-nav" aria-label="Footer">
         <a href="#features">Features</a>
         <a href="#waitlist">Waitlist</a>
@@ -255,64 +197,13 @@
     (function () {
       var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-      function loadImage(img) {
-        var src = img.getAttribute("data-src");
-        if (!src || img.getAttribute("src")) return;
-        img.setAttribute("src", src);
-        img.addEventListener("load", function () {
-          img.closest(".hero-bg").classList.add("has-photo");
-        }, { once: true });
-        img.addEventListener("error", function () {
-          img.remove();
-        }, { once: true });
-      }
-
       function revealSection(section) {
         if (section.classList.contains("is-visible")) return;
         section.classList.add("is-visible");
-        section.querySelectorAll("img[data-src]").forEach(loadImage);
-      }
-
-      function animateTshChart(chart) {
-        if (!chart || chart.classList.contains("is-animated")) return;
-        var line = chart.querySelector(".chart-line");
-        if (line && typeof line.getTotalLength === "function") {
-          chart.style.setProperty("--line-length", line.getTotalLength());
-        }
-        chart.classList.add("is-animated");
-      }
-
-      function setupChartAnimation() {
-        var showcase = document.querySelector(".lab-showcase");
-        var chart = document.querySelector(".tsh-chart");
-        if (!chart) return;
-
-        if (reducedMotion) {
-          animateTshChart(chart);
-          return;
-        }
-
-        if ("IntersectionObserver" in window && showcase) {
-          var chartObserver = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-              if (entry.isIntersecting) {
-                window.setTimeout(function () {
-                  animateTshChart(chart);
-                }, 350);
-                chartObserver.unobserve(entry.target);
-              }
-            });
-          }, { threshold: 0.35 });
-
-          chartObserver.observe(showcase);
-        } else {
-          animateTshChart(chart);
-        }
       }
 
       if (reducedMotion) {
         document.querySelectorAll(".lazy-section").forEach(revealSection);
-        document.querySelectorAll(".hero-bg__photo[data-src]").forEach(loadImage);
       } else if ("IntersectionObserver" in window) {
         var sectionObserver = new IntersectionObserver(function (entries) {
           entries.forEach(function (entry) {
@@ -326,24 +217,9 @@
         document.querySelectorAll(".lazy-section").forEach(function (section) {
           sectionObserver.observe(section);
         });
-
-        var heroPhoto = document.querySelector(".hero-bg__photo[data-src]");
-        if (heroPhoto) {
-          var loadHeroPhoto = function () {
-            loadImage(heroPhoto);
-          };
-          if ("requestIdleCallback" in window) {
-            requestIdleCallback(loadHeroPhoto, { timeout: 1800 });
-          } else {
-            window.setTimeout(loadHeroPhoto, 400);
-          }
-        }
       } else {
         document.querySelectorAll(".lazy-section").forEach(revealSection);
-        document.querySelectorAll(".hero-bg__photo[data-src]").forEach(loadImage);
       }
-
-      setupChartAnimation();
 
       (function setupWaitlistForm() {
         var form = document.getElementById("waitlist-form");
@@ -353,7 +229,8 @@
         if (!form || !input || !btn || !status) return;
 
         var config = window.CALYPSO_CONFIG || {};
-        var notifyEmail = config.notifyEmail || "kelly@calypsoai.health";
+        var notifyEmails = config.notifyEmails || [config.notifyEmail || "kelly@calypsoai.health"];
+        if (!Array.isArray(notifyEmails)) notifyEmails = [notifyEmails];
         var supabaseUrl = (config.supabaseUrl || "").replace(/\/$/, "");
         var supabaseAnonKey = config.supabaseAnonKey || "";
 
@@ -394,45 +271,53 @@
             });
         }
 
-        function notifyKelly(email) {
+        function notifyTeam(email) {
           var message = email + " joined the Calypso Health waitlist.";
           var messageField = document.getElementById("waitlist-message");
           if (messageField) messageField.value = message;
 
-          return fetch("https://formsubmit.co/ajax/" + encodeURIComponent(notifyEmail), {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Accept: "application/json",
-            },
-            body: JSON.stringify({
-              email: email,
-              _subject: "New Calypso waitlist signup",
-              _template: "table",
-              _captcha: "false",
-              message: message,
-            }),
-          })
-            .then(function (res) {
-              return res.text().then(function (text) {
-                if (!res.ok) return false;
-                try {
-                  var data = JSON.parse(text);
-                  return Boolean(
-                    data &&
-                      (data.success === true ||
-                        data.success === "true" ||
-                        data.message ||
-                        data.result === "success")
-                  );
-                } catch (_) {
-                  return true;
-                }
-              });
+          var payload = {
+            email: email,
+            _subject: "New Calypso waitlist signup",
+            _template: "table",
+            _captcha: "false",
+            message: message,
+          };
+
+          return Promise.all(
+            notifyEmails.map(function (recipient) {
+              return fetch("https://formsubmit.co/ajax/" + encodeURIComponent(recipient), {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                  Accept: "application/json",
+                },
+                body: JSON.stringify(payload),
+              })
+                .then(function (res) {
+                  return res.text().then(function (text) {
+                    if (!res.ok) return false;
+                    try {
+                      var data = JSON.parse(text);
+                      return Boolean(
+                        data &&
+                          (data.success === true ||
+                            data.success === "true" ||
+                            data.message ||
+                            data.result === "success")
+                      );
+                    } catch (_) {
+                      return true;
+                    }
+                  });
+                })
+                .catch(function () {
+                  return false;
+                });
             })
-            .catch(function () {
-              return false;
-            });
+          ).then(function (results) {
+            return results.some(Boolean);
+          });
         }
 
         form.addEventListener("submit", function onSubmit(e) {
@@ -449,7 +334,7 @@
           btn.textContent = "Joining…";
           setStatus("");
 
-          Promise.all([notifyKelly(email), saveToSupabase(email)]).then(function (results) {
+          Promise.all([notifyTeam(email), saveToSupabase(email)]).then(function (results) {
             if (results[0] || results[1]) {
               showSuccess();
               return;
