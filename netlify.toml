@@ -10,6 +10,30 @@
     X-Frame-Options = "DENY"
 
 [[redirects]]
+  from = "https://calypsohealth.org/*"
+  to = "https://calypsoai.health/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://calypsohealth.org/*"
+  to = "https://calypsoai.health/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.calypsohealth.org/*"
+  to = "https://calypsoai.health/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.calypsohealth.org/*"
+  to = "https://calypsoai.health/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/favicon.ico"
   to = "/favicon.svg"
   status = 200
