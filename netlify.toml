@@ -10,26 +10,26 @@
     X-Frame-Options = "DENY"
 
 [[redirects]]
-  from = "https://calypsohealth.org/*"
-  to = "https://calypsoai.health/:splat"
+  from = "https://calypsoai.health/*"
+  to = "https://calypsohealth.org/:splat"
   status = 301
   force = true
 
 [[redirects]]
-  from = "http://calypsohealth.org/*"
-  to = "https://calypsoai.health/:splat"
+  from = "http://calypsoai.health/*"
+  to = "https://calypsohealth.org/:splat"
   status = 301
   force = true
 
 [[redirects]]
-  from = "https://www.calypsohealth.org/*"
-  to = "https://calypsoai.health/:splat"
+  from = "https://www.calypsoai.health/*"
+  to = "https://calypsohealth.org/:splat"
   status = 301
   force = true
 
 [[redirects]]
-  from = "http://www.calypsohealth.org/*"
-  to = "https://calypsoai.health/:splat"
+  from = "http://www.calypsoai.health/*"
+  to = "https://calypsohealth.org/:splat"
   status = 301
   force = true
 
